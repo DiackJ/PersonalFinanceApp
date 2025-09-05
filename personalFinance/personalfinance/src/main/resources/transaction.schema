@@ -1,0 +1,11 @@
+CREATE TABLE transaction (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT,
+    recipient_or_sender TEXT,
+    category TEXT,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    amount INT,
+    type TEXT,
+    FOREIGN KEY (user_id) REFERENCES user (id)
+    ON DELETE CASCADE
+   );

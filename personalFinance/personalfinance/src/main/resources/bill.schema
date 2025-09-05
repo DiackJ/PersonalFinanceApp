@@ -1,0 +1,10 @@
+CREATE TABLE bill (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT,
+    category TEXT,
+    transaction_type TEXT,
+    due_date DATE,
+    amount INT,
+    FOREIGN KEY (user_id) REFERENCES user (id)
+    ON DELETE CASCADE,
+   );

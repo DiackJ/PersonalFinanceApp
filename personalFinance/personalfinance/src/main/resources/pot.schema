@@ -1,0 +1,10 @@
+CREATE TABLE pot (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT,
+    title TEXT,
+    target_amount INT,
+    total_saved INT,
+    saved_percentage DECIMAL,
+    FOREIGN KEY (user_id) REFERENCES user (id)
+    ON DELETE CASCADE
+   );

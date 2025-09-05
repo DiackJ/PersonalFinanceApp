@@ -1,0 +1,10 @@
+CREATE TABLE budget (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT,
+    category_name TEXT,
+    max_spend INT,
+    spent INT,
+    remaining INT,
+    FOREIGN KEY (user_id) REFERENCES user (id)
+    ON DELETE CASCADE
+   );
